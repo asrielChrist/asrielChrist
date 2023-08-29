@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Bienvenue sur notre première page web asrielchrist.com parle: actualités, jeux vidéo et autres">
+    <meta name="keywords" content="Découvertes">
+    <meta name="author" content="Gnagbo Christ Evane">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asrielchrist YTB WEB</title>
+   
+    <!-- Styles CSS pour la mise en page -->
+    <style>
+        /* Votre style CSS ici */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ADD8E6; /* Bleu clair */
+            color: white; /* Texte en blanc */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <!-- Fin des styles CSS -->
+</head>
+<body>
+    <header>
+        <h1>Accueil: les news asrielchrist</h1>
+    </header>
+    <main>
+        <!-- Bouton pour regarder des vidéos animées -->
+        <button onclick="window.location.href='https://vostfree.ws/'">Regarder des vidéos animées</button>
+        
+        <!-- Bouton pour faire un don PayPal -->
+        <button onclick="faireDonPayPal()">Faire un Don</button>
+        <script>
+            function faireDonPayPal() {
+                window.location.href = 'https://www.paypal.com/donate/?hosted_button_id=X8WR2AQAKDQM6';
+            }
+        </script>
+        
+        <!-- Bouton pour jouer à des jeux mobiles iOS et Windows -->
+        <button onclick="window.location.href='https://poki.com/fr'">Jouer à des jeux mobile iOS et Windows</button>
+        
+        <!-- Bouton pour les Crédits -->
+        <button onclick="myFunction()">Les Crédits</button>
+        <script>
+            function myFunction() {
+                alert("Merci beaucoup de visiter mon site web et remerciements spécial à Gbogou eden directeur des idées, mon père, ma mère pour leur soutien ainsi qu'à MR.ehôuman");
+            }
+        </script>
+        
+        <h2>Nouvelles news</h2>
+        <!-- ... (votre contenu) ... -->
+         <p>Voici quelques actualités récentes :</p>
+        <ul>
+            <li>Actualité 1 : Roblox accusé d'être un réseau de jeu illégal, Netflix s'attaque au cloud gaming : la news asrielchrist : selon la source l'actualité business du jeu vidéo Roblox serait accusé d'être un réseau de jeu d'argent illégal, des investissements en baisse dans l'industrie du jeu vidéo, Netflix qui met les bouchées doubles dans le gaming... et plein d'autres informations croustillantes à se mettre sous la dent. Je vous laisse regarder tout ça avec ce lien <a href="https://www.jeuxvideo.com/news/1789682/roblox-accuse-d-etre-un-reseau-de-jeu-illegal-netflix-s-attaque-au-cloud-gaming-la-news-business-de-la-semaine.htm">ici</a></li>
+            
+            <li>Actualité 2 : Apple retourne sa veste sur la loi du droit à la réparation en Californie. Les news asrielchrist : selon iPhoneSoft, Apple retourne sa veste sur la loi du droit à la réparation en Californie. Décision logique, mais importante. Apple vient de changer d'avis et soutient finalement le projet de loi californien sur le droit à la réparation. La pomme ne devrait plus avoir de problème à être en règle étant donné qu'elle propose désormais son programme spécial. <br> Pour plus d'informations, consultez ce <a href="https://iphonesoft.fr/2023/08/24/apple-retourne-veste-loi-droit-reparation-californie?AMP=1&amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=Source%C2%A0%3A%20%251%24s&aoh=16928951249947&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fiphonesoft.fr%2F2023%2F08%2F24%2Fapple-retourne-veste-loi-droit-reparation-californie">lien</a></li>
+            
+            <li>Actualité 3</li>
+        </ul>
+        
+        <!-- Jeu de Devinette -->
+        <!-- ... (votre contenu) ... -->
+        
+        <!-- Bouton pour jouer au Snake -->
+        <h2>Jeu Snake</h2>
+        <button onclick="lancerJeuSnake()">Jouer à Snake</button>
+        <script>
+            function lancerJeuSnake() {
+                window.location.href = 'snake.html'; // Assurez-vous que snake.html existe
+            }
+        </script>
+        <!-- Fin du bouton Snake -->
+
+        <!-- Formulaire de commentaire -->
+        <h2>Laissez un commentaire</h2>
+        <form id="commentForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="comment">Commentaire :</label><br>
+            <textarea id="commentText" name="comment" rows="4" cols="50"></textarea><br><br>
+
+            <button type="submit">Publier le commentaire</button>
+        </form>
+    </main>
+    <!-- Script JavaScript pour le formulaire -->
+    <script>
+        document.getElementById("commentForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+
+            // Récupérez les valeurs du formulaire
+            var name = document.getElementById("name").value;
+            var comment = document.getElementById("commentText").value;
+
+            // Affichez les commentaires (vous pouvez personnaliser cela selon vos besoins)
+            var commentSection = document.createElement("div");
+            commentSection.innerHTML = "<strong>" + name + " :</strong> " + comment;
+            document.body.appendChild(commentSection);
+
+            // Effacez les champs du formulaire
+            document.getElementById("name").value = "";
+            document.getElementById("commentText").value = "";
+        });
+    </script>
+</body>
+</html>
